@@ -1,3 +1,4 @@
+import InputSearch from "@/components/Navbar/Input";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -9,10 +10,7 @@ const Navbar = () => {
           className="text-2xl font-bold text-white">
           CuyAnimeList
         </Link>
-        <input
-          type="text"
-          placeholder="Cari Anime"
-        />
+        <InputSearch />
       </div>
     </nav>
   );
