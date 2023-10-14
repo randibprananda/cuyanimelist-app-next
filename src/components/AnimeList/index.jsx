@@ -8,7 +8,7 @@ const AnimeList = ({ api }) => {
         return (
           <Link
             href={`/${anime.mal_id}`}
-            className="cursor-pointer">
+            className="text-primary hover:text-accent transition-all duration-300 cursor-pointer">
             <Image
               src={anime.images.webp.image_url}
               alt=""
