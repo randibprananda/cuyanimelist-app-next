@@ -4,11 +4,12 @@ import Link from "next/link";
 const AnimeList = ({ api }) => {
   return (
     <div className="md:grid-cols-4 sm:grid-cols-3 grid grid-cols-2 gap-4 px-4">
-      {api.data.map((anime) => {
+      {api?.data?.map((anime) => {
         return (
           <Link
             href={`/${anime.mal_id}`}
-            className="text-primary hover:text-accent transition-all duration-300 cursor-pointer">
+            className="text-primary hover:text-accent transition-all duration-300 cursor-pointer"
+            key={anime.mal_id}>
             <Image
               src={anime.images.webp.image_url}
               alt=""

@@ -9,7 +9,11 @@ const InputSearch = () => {
   const searchRef = useRef();
 
   const handleSearch = (event) => {
-    const keyword = searchRef.current.value;
+    let keyword = searchRef.current.value;
+
+    if (!keyword) {
+      return;
+    }
 
     if (event.key === "Enter" || event.type === "click") {
       event.preventDefault();
