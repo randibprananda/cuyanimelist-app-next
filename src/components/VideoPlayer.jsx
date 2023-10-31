@@ -3,12 +3,12 @@
 import { useState } from "react";
 import YouTube from "react-youtube";
 
-const VideoPlayer = (youtubeId) => {
+const VideoPlayer = ({ youtubeId }) => {
   const [isOpen, setIsOpen] = useState(true);
 
   const option = {
-    width: 300,
-    height: 250,
+    width: "300",
+    height: "250",
   };
 
   const handleVideoPlayer = () => {

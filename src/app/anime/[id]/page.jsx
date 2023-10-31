@@ -1,6 +1,7 @@
+import Image from "next/image";
+
 import VideoPlayer from "@/components/VideoPlayer";
 import { getAnimeResponse } from "@/libs/api";
-import Image from "next/image";
 
 const Page = async ({ params: { id } }) => {
   const { data: anime } = await getAnimeResponse(`anime/${id}`);
@@ -40,7 +41,7 @@ const Page = async ({ params: { id } }) => {
         />
         <p className="text-xl text-justify">{anime.synopsis}</p>
       </div>
-      <VideoPlayer youtubeId={anime.trailer["youtube_id"]} />
+      <VideoPlayer youtubeId={anime.trailer.youtube_id} />
     </>
   );
 };

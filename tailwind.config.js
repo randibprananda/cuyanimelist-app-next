@@ -13,6 +13,9 @@ module.exports = {
         secondary: "#393e46",
         dark: "#222831",
       },
+      fontFamily: {
+        gabarito: ["Gabarito", "sans-serif"],
+      },
     },
   },
   plugins: [],
