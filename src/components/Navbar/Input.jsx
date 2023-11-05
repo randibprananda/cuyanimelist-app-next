@@ -11,7 +11,7 @@ const InputSearch = () => {
   const handleSearch = (event) => {
     let keyword = searchRef.current.value;
 
-    if (!keyword) {
+    if (!keyword || keyword.trim() === "") {
       return;
     }
 
